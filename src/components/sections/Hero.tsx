@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { PhoneIcon } from '@heroicons/react/24/solid';
 
 const Hero = () => {
@@ -9,7 +8,7 @@ const Hero = () => {
         <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white"></div>
         <div className="absolute left-20 bottom-10 h-40 w-40 rounded-full bg-white"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Text Content */}
@@ -28,7 +27,7 @@ const Hero = () => {
               <span>تماس بگیرید</span>
             </a>
           </div>
-          
+
           {/* Image */}
           <div className="md:w-1/2 relative">
             <div className="relative h-[300px] md:h-[400px] w-full">
