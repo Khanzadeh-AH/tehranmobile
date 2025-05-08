@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="#0c8ee0"/>
+  
+  <!-- Phone Icon -->
+  <path d="M320 96H192c-17.7 0-32 14.3-32 32v256c0 17.7 14.3 32 32 32h128c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32zm-16 304H208c-4.4 0-8-3.6-8-8V136c0-4.4 3.6-8 8-8h96c4.4 0 8 3.6 8 8v256c0 4.4-3.6 8-8 8z" fill="white"/>
+  
+  <!-- Screen -->
+  <rect x="208" y="136" width="96" height="256" rx="4" fill="#f0f7ff"/>
+  
+  <!-- Persian Text "تهران" -->
+  <text x="256" y="220" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#0c8ee0">تهران</text>
+  
+  <!-- Persian Text "موبایل" -->
+  <text x="256" y="260" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#0c8ee0">موبایل</text>
+</svg>
