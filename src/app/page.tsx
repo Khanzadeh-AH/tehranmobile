@@ -6,13 +6,6 @@ import Process from "@/components/sections/Process";
 import Testimonials from "@/components/sections/Testimonials";
 import AboutUs from "@/components/sections/AboutUs";
 import Contact from "@/components/sections/Contact";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "تهران موبایل | خدمات تعمیر موبایل",
-  description: "تهران موبایل ارائه دهنده خدمات تخصصی تعمیر انواع گوشی های موبایل با بهترین کیفیت و قیمت مناسب",
-  keywords: "تعمیر موبایل, تعمیرات موبایل, تعویض قطعات موبایل, تعمیر گوشی, خدمات موبایل, تهران موبایل",
-};
 
 export default function Home() {
   return (

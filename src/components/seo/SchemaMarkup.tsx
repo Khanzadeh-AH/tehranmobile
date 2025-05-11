@@ -1,4 +1,8 @@
+"use client";
+
 import React from 'react';
+
+// This component is explicitly marked as a client component
 
 const SchemaMarkup: React.FC = () => {
   const localBusinessSchema = {
