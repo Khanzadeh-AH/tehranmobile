@@ -254,14 +254,19 @@ const Contact = () => {
 
             {/* Map */}
             <div className="bg-white p-4 rounded-lg shadow-sm h-[300px] relative">
-              <div className="absolute inset-0 rounded-md overflow-hidden">
-                <Image 
-                  src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=2031&auto=format&fit=crop"
-                  alt="نقشه موقعیت تهران موبایل"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 rounded-md overflow-hidden animate-fadeIn">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207371.97156475974!2d51.21748071640625!3d35.697076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2sTehran%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1652345678901!5m2!1sen!2s"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="نقشه موقعیت تهران موبایل"
+                  className="rounded-md"
+                ></iframe>
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="bg-white bg-opacity-80 p-3 rounded-full">
                     <MapPinIcon className="h-8 w-8 text-primary-600" />
                   </div>

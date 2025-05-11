@@ -40,6 +40,7 @@ const config: Config = {
         dark: '#1e293b',  // Dark text
       },
       fontFamily: {
+        'vazirmatn': ['var(--font-vazirmatn)', 'sans-serif'],
         'noto-sans-arabic': ['var(--font-noto-sans-arabic)', 'sans-serif'],
         'roboto': ['var(--font-roboto)', 'system-ui', 'sans-serif'],
         'playfair': ['var(--font-playfair)', 'serif'],
@@ -50,6 +51,15 @@ const config: Config = {
         medium: '500',
         semibold: '600',
         bold: '700',
+      },
+      animation: {
+        'fadeIn': 'fadeIn 1s ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
     },
   },

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Arabic, Roboto, Playfair_Display } from "next/font/google";
+import { Noto_Sans_Arabic, Roboto, Playfair_Display, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
@@ -21,6 +21,13 @@ const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const vazirmatn = Vazirmatn({
+  variable: "--font-vazirmatn",
+  subsets: ["arabic"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -59,7 +66,7 @@ export default function RootLayout({
         <SchemaMarkup />
       </head>
       <body
-        className={`${notoSansArabic.variable} ${roboto.variable} ${playfairDisplay.variable} font-noto-sans-arabic antialiased bg-light text-dark`}
+        className={`${vazirmatn.variable} ${notoSansArabic.variable} ${roboto.variable} ${playfairDisplay.variable} font-vazirmatn antialiased bg-light text-dark`}
       >
         {children}
       </body>

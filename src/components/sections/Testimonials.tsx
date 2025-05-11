@@ -1,6 +1,5 @@
 import { StarIcon } from '@heroicons/react/24/solid';
 import { StarIcon as StarOutlineIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
 
 // Define the testimonial type
 type Testimonial = {
@@ -10,7 +9,6 @@ type Testimonial = {
   comment: string;
   device?: string;
   repair?: string;
-  imageSrc?: string;
 };
 
 // List of testimonials
@@ -21,8 +19,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     comment: 'تعمیر صفحه نمایش گوشی من در کمتر از ۲ ساعت انجام شد. کیفیت کار عالی بود و قیمت هم منصفانه. قطعا تهران موبایل را به دوستانم معرفی می‌کنم.',
     device: 'سامسونگ گلکسی S21',
-    repair: 'تعویض صفحه نمایش',
-    imageSrc: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076&auto=format&fit=crop'
+    repair: 'تعویض صفحه نمایش'
   },
   {
     id: 2,
@@ -30,8 +27,7 @@ const testimonials: Testimonial[] = [
     rating: 4,
     comment: 'باتری گوشی من خیلی زود خالی می‌شد. بعد از تعویض باتری در تهران موبایل، مشکل کاملا حل شد و الان گوشی تا آخر روز شارژ نگه می‌داره.',
     device: 'آیفون 12',
-    repair: 'تعویض باتری',
-    imageSrc: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop'
+    repair: 'تعویض باتری'
   },
   {
     id: 3,
@@ -39,8 +35,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     comment: 'دوربین گوشی من کاملا از کار افتاده بود. تکنسین‌های تهران موبایل با دقت بالا مشکل رو تشخیص دادن و تعمیر کردن. الان دوربین حتی بهتر از قبل کار می‌کنه.',
     device: 'شیائومی Redmi Note 10',
-    repair: 'تعمیر دوربین',
-    imageSrc: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop'
+    repair: 'تعمیر دوربین'
   },
   {
     id: 4,
@@ -48,8 +43,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     comment: 'خدمات پیک و تحویل در محل واقعا عالی بود. نیازی به مراجعه حضوری نبود و گوشی رو همون روز تعمیر شده تحویل گرفتم. کارشون حرفه‌ای و سریع بود.',
     device: 'هواوی P30 Pro',
-    repair: 'تعویض باتری و اسپیکر',
-    imageSrc: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop'
+    repair: 'تعویض باتری و اسپیکر'
   }
 ];
 
@@ -93,23 +87,11 @@ const Testimonials = () => {
                     <span className="mr-2 text-gray-600 text-sm">{testimonial.rating}.0</span>
                   </div>
                 </div>
-                {testimonial.imageSrc && (
-                  <div className="relative h-16 w-16 rounded-full overflow-hidden">
-                    <Image 
-                      src={testimonial.imageSrc}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                )}
-                {!testimonial.imageSrc && (
-                  <div className="h-16 w-16 rounded-full bg-primary-100 flex items-center justify-center">
-                    <span className="text-primary-700 font-bold text-xl">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
-                )}
+                <div className="h-16 w-16 rounded-full bg-primary-100 flex items-center justify-center">
+                  <span className="text-primary-700 font-bold text-xl">
+                    {testimonial.name.charAt(0)}
+                  </span>
+                </div>
               </div>
 
               <p className="text-gray-600 mb-4">{testimonial.comment}</p>
