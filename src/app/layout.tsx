@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Arabic } from "next/font/google";
+import { Noto_Sans_Arabic, Roboto, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
 const notoSansArabic = Noto_Sans_Arabic({
   variable: "--font-noto-sans-arabic",
   subsets: ["arabic"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  display: "swap",
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -44,7 +59,7 @@ export default function RootLayout({
         <SchemaMarkup />
       </head>
       <body
-        className={`${notoSansArabic.variable} font-noto-sans-arabic antialiased bg-light text-dark`}
+        className={`${notoSansArabic.variable} ${roboto.variable} ${playfairDisplay.variable} font-noto-sans-arabic antialiased bg-light text-dark`}
       >
         {children}
       </body>

@@ -41,6 +41,15 @@ const config: Config = {
       },
       fontFamily: {
         'noto-sans-arabic': ['var(--font-noto-sans-arabic)', 'sans-serif'],
+        'roboto': ['var(--font-roboto)', 'system-ui', 'sans-serif'],
+        'playfair': ['var(--font-playfair)', 'serif'],
+      },
+      fontWeight: {
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
       },
     },
   },

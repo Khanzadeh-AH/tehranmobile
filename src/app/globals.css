@@ -11,6 +11,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-noto-sans-arabic);
+  --font-latin: var(--font-roboto);
+  --font-display: var(--font-playfair);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +30,22 @@ html[dir="rtl"] * {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-sans), var(--font-latin), system-ui, sans-serif;
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-sans), serif;
+}
+
+.font-latin {
+  font-family: var(--font-latin), system-ui, sans-serif;
 }
 
 /* Custom scrollbar for better UX */
