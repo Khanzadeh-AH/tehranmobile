@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   ClockIcon, 
-  MapPinIcon 
+  MapPinIcon,
+  PaperAirplaneIcon
 } from '@heroicons/react/24/outline';
 
 // Define business hours type
@@ -197,6 +199,30 @@ const Contact = () => {
 
                 <div className="flex items-start">
                   <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center ml-4 shrink-0">
+                    <PaperAirplaneIcon className="h-5 w-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900">تلگرام</h4>
+                    <a href="https://t.me/Khanzadeh_AH" className="text-gray-600 hover:text-primary-600 transition-colors">
+                      Khanzadeh_AH
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center ml-4 shrink-0">
+                    <PhoneIcon className="h-5 w-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900">واتساپ</h4>
+                    <a href="https://wa.me/989190737241" className="text-gray-600 hover:text-primary-600 transition-colors">
+                      ۰۹۱۹۰۷۳۷۲۴۱
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center ml-4 shrink-0">
                     <ClockIcon className="h-5 w-5 text-primary-600" />
                   </div>
                   <div>
@@ -228,11 +254,17 @@ const Contact = () => {
 
             {/* Map */}
             <div className="bg-white p-4 rounded-lg shadow-sm h-[300px] relative">
-              {/* Placeholder for map - will be replaced with actual map */}
-              <div className="absolute inset-0 bg-gray-200 rounded-md flex items-center justify-center">
-                <div className="text-center">
-                  <MapPinIcon className="h-12 w-12 text-primary-500 mx-auto mb-2" />
-                  <p className="text-gray-600">نقشه موقعیت تهران موبایل</p>
+              <div className="absolute inset-0 rounded-md overflow-hidden">
+                <Image 
+                  src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=2031&auto=format&fit=crop"
+                  alt="نقشه موقعیت تهران موبایل"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-white bg-opacity-80 p-3 rounded-full">
+                    <MapPinIcon className="h-8 w-8 text-primary-600" />
+                  </div>
                 </div>
               </div>
             </div>

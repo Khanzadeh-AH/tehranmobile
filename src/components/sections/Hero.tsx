@@ -1,4 +1,5 @@
 import { PhoneIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -31,12 +32,14 @@ const Hero = () => {
           {/* Image */}
           <div className="md:w-1/2 relative">
             <div className="relative h-[300px] md:h-[400px] w-full">
-              {/* Placeholder for hero image - will be replaced with actual image */}
-              <div className="absolute inset-0 bg-primary-600 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">📱</div>
-                  <p className="text-white opacity-80">تصویر تکنسین در حال تعمیر گوشی</p>
-                </div>
+              <div className="absolute inset-0 rounded-lg overflow-hidden">
+                <Image 
+                  src="https://images.unsplash.com/photo-1581092921461-7d65ca45393a?q=80&w=2070&auto=format&fit=crop"
+                  alt="تکنسین در حال تعمیر گوشی موبایل"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
