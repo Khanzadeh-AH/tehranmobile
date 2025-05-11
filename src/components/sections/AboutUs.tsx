@@ -29,7 +29,7 @@ const AboutUs = () => {
             <div className="md:w-1/2 relative min-h-[250px]">
               <div className="absolute inset-0 rounded-lg overflow-hidden shadow-lg animate-fadeIn">
                 <Image 
-                  src="/images/hero/phone-repair-1.jpg"
+                  src="https://images.unsplash.com/photo-1580910051074-3eb694886505?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                   alt="تعمیرگاه تخصصی تهران موبایل"
                   fill
                   className="object-cover transform transition-transform duration-700 hover:scale-105"
