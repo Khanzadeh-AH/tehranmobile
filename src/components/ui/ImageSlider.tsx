@@ -77,12 +77,12 @@ const ImageSlider = ({
 
   return (
     <div className="relative">
-      <div className="relative h-[300px] md:h-[400px] w-full rounded-lg overflow-hidden shadow-2xl">
+      <div className="relative w-full rounded-lg overflow-hidden shadow-2xl" style={{ aspectRatio: '16/9' }}>
         {/* Slider Images */}
         {slides.map((slide, index) => (
           <div 
             key={index}
-            className={`absolute inset-0 overflow-hidden transform transition-all duration-700 ${
+            className={`absolute inset-0 overflow-hidden transform transition-all duration-500 ${
               index === currentSlide 
                 ? 'opacity-100 translate-x-0 scale-100' 
                 : index < currentSlide
@@ -96,7 +96,7 @@ const ImageSlider = ({
               fill
               className="object-cover"
               priority={index === 0}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 50vw"
             />
             {/* Image Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
@@ -118,33 +118,33 @@ const ImageSlider = ({
         {/* Navigation Arrows */}
         <button 
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300 z-10"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 active:bg-white/60 text-white p-2 sm:p-3 rounded-full backdrop-blur-sm transition-all duration-300 z-10 touch-manipulation"
           aria-label="Previous slide"
         >
-          <ChevronRightIcon className="h-6 w-6" />
+          <ChevronRightIcon className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
 
         <button 
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300 z-10"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 active:bg-white/60 text-white p-2 sm:p-3 rounded-full backdrop-blur-sm transition-all duration-300 z-10 touch-manipulation"
           aria-label="Next slide"
         >
-          <ChevronLeftIcon className="h-6 w-6" />
+          <ChevronLeftIcon className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
 
         {/* Slide Counter */}
-        <div className="absolute bottom-4 right-4 bg-black/30 text-white text-sm px-2 py-1 rounded-full backdrop-blur-sm">
+        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-black/40 text-white text-xs sm:text-sm px-2 py-1 rounded-full backdrop-blur-sm">
           {currentSlide + 1} / {slides.length}
         </div>
       </div>
 
       {/* Slider Navigation Dots */}
-      <div className="flex justify-center mt-4 space-x-3 rtl:space-x-reverse">
+      <div className="flex justify-center mt-3 sm:mt-4 space-x-4 rtl:space-x-reverse">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 touch-manipulation ${
               index === currentSlide 
                 ? 'bg-white scale-125' 
                 : 'bg-white/40 hover:bg-white/70'

@@ -57,6 +57,11 @@ export const metadata: Metadata = {
   title: "تهران موبایل | خدمات تعمیر موبایل",
   description: "تهران موبایل ارائه دهنده خدمات تخصصی تعمیر انواع گوشی های موبایل با بهترین کیفیت و قیمت مناسب",
   keywords: "تعمیر موبایل, تعمیرات موبایل, تعویض قطعات موبایل, تعمیر گوشی, خدمات موبایل, تهران موبایل",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
   alternates: {
     canonical: 'https://tehranmobile.ir',
     languages: {
