@@ -72,12 +72,6 @@ export const metadata: Metadata = {
     description: 'تهران موبایل ارائه دهنده خدمات تخصصی تعمیر انواع گوشی های موبایل با بهترین کیفیت و قیمت مناسب',
     siteName: 'تهران موبایل',
   },
-  // Add alternate links in metadata
-  links: [
-    { rel: 'alternate', hrefLang: 'fa', href: 'https://tehranmobile.ir' },
-    { rel: 'alternate', hrefLang: 'en', href: 'https://tehranmobile.ir/en' },
-    { rel: 'alternate', hrefLang: 'x-default', href: 'https://tehranmobile.ir' },
-  ],
 };
 
 export default function RootLayout({
